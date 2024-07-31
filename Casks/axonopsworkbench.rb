@@ -1,9 +1,10 @@
 cask "axonopsworkbench" do
-  arch arm: "arm64", intel: "x86_64"
   name "AxonOps Workbench"
   desc "AxonOps Workbench"
   homepage "https://axonops.com"
   version "0.1.0-internal-20240729"
+
+  arch arm: "arm64", intel: "x86_64"
 
   url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOpsWorkbench-#{version}-mac-#{arch}.zip"
 
