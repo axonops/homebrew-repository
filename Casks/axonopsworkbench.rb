@@ -1,5 +1,5 @@
 cask "axonopsworkbench" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "0.1.0-internal-20240729"
   sha256 arm:   "03d3dfaa20e9ec24561803e45211ac7bbefe9f839b0f45b40ce52ac8c0326b0e",
