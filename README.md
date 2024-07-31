@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install axonops/repository/<formula>`
+`brew install axonops/homebrew-repository/<formula>`
 
-Or `brew tap axonops/repository` and then `brew install <formula>`.
+Or `brew tap axonops/homebrew-repository` and then `brew install <formula>`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
