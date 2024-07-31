@@ -8,7 +8,7 @@ cask "axonopsworkbench" do
   url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOpsWorkbench-#{version}-mac-#{arch}.zip"
   name "AxonOps Workbench"
   desc "This Cask install the AxonOps Workbench application"
-  homepage "https://axonops.com/"
+  homepage "https://github.com/axonops/axonops-workbench-cassandra/"
 
   livecheck do
     url :url
