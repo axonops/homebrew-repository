@@ -5,7 +5,7 @@ cask "axonopsworkbench" do
   sha256 arm:   "%SHA_ARM%",
          intel: "%SHA_AMD%"
 
-  url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOpsWorkbench-#{version}-mac-#{arch}.zip"
+  url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOps.Workbench-#{version}-mac-#{arch}.zip"
   name "AxonOps Workbench"
   desc "This Cask install the AxonOps Workbench application"
   homepage "https://github.com/axonops/axonops-workbench-cassandra/"
@@ -17,9 +17,9 @@ cask "axonopsworkbench" do
 
   depends_on macos: ">= :big_sur"
 
-  app "AxonOpsWorkbench.app"
+  app "AxonOps Workbench.app"
 
-  zap trash: "~/Library/Application Scripts/AxonOpsWorkbench"
+  zap trash: "~/Library/Application Scripts/AxonOps Workbench"
 end
 
 # code: language=ruby
