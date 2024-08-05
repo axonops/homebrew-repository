@@ -19,7 +19,7 @@ cask "axonopsworkbench" do
 
   app "AxonOps Workbench.app"
 
-  zap trash: "~/Library/Application Scripts/AxonOps Workbench"
+  zap trash: "~/Library/Application Support/AxonOps Workbench"
 end
 
 # code: language=ruby
