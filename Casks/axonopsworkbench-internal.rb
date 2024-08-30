@@ -1,4 +1,4 @@
-cask "axonopsworkbench" do
+cask "axonopsworkbench-internal" do
   arch arm: "arm64", intel: "x64"
 
   version "0.1.1-internal-20240830"
