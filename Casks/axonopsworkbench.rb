@@ -1,9 +1,9 @@
 cask "axonopsworkbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.1-internal-20240827"
-  sha256 arm:   "74583590c3d71feab8c6718a63f2c0cd347de751606915a5003e6426883f812c",
-         intel: "fe86c36ccd2f71c8f1262994467b19d48f68447557754762f1784c2c299914e7"
+  version "v457-feat-generate-a-software-bill-of-materials-sbom-as-part-of-the-build-process"
+  sha256 arm:   "",
+         intel: ""
 
   url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOps.Workbench-#{version}-mac-#{arch}.zip"
   name "AxonOps Workbench"
