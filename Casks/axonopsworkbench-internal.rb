@@ -5,10 +5,10 @@ cask "axonopsworkbench-internal" do
   sha256 arm:   "df806114db6af12a27131d7b16dd3ba26ee6e8bfa2e8515adda8263fa5fc5b87",
          intel: "8fa34d0b140b4b200aade0fff27f684c017eac4cfdd76b99380f41262bff7758"
 
-  url "https://github.com/axonops/axonops-workbench-cassandra/releases/download/#{version}/AxonOps.Workbench-#{version}-mac-#{arch}.zip"
+  url "https://github.com/axonops/axonops-workbench/releases/download/#{version}/AxonOps.Workbench-#{version}-mac-#{arch}.zip"
   name "AxonOps Workbench"
   desc "This Cask install the AxonOps Workbench application"
-  homepage "https://github.com/axonops/axonops-workbench-cassandra/"
+  homepage "https://github.com/axonops/axonops-workbench/"
 
   livecheck do
     url :url
