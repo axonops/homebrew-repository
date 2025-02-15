@@ -1,4 +1,4 @@
-# AxonOps Homebrew Repository
+# AxonOps Workbench Homebrew Repository
 
 ## How do I install these formulae?
 
