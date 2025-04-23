@@ -1,10 +1,14 @@
+# typed: strict
+# frozen_string_literal: true
+
+# This class compiles and installs the CQLSH
 class Cqlsh < Formula
   include Language::Python::Virtualenv
 
-  desc "Home of the cqlsh package on PyPI. Repackages the official Cassandra cqlsh for lighter-weight installs."
+  desc "Repackages the official Cassandra for lighter-weight installs"
   homepage "https://github.com/axonops/cqlsh"
   url "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", tag: "v0.0.4", using: :git, revision: "dc79097ef9439cd024a3c37c97ab456732c80ab1"
-  #head "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", branch: "improvements", using: :git
+  # head "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", branch: "improvements", using: :git
   license "Apache-2.0"
 
   depends_on "make" => :build
@@ -17,7 +21,7 @@ class Cqlsh < Formula
   end
 
   def install
-    #virtualenv_install_with_resources without: "setuptools"
+    # virtualenv_install_with_resources without: "setuptools"
     python = "python3.11"
     ENV.prepend_path "PYTHONPATH", Formula["cython"].opt_libexec/Language::Python.site_packages(python)
     venv = virtualenv_create(libexec, python)
@@ -25,7 +29,7 @@ class Cqlsh < Formula
 
     ENV.prepend_path "PATH", "#{libexec}/bin"
     ENV.prepend_path "PYTHONPATH", "./build"
-    h = ENV['HOMEBREW_PREFIX']
+    h = ENV.fetch("HOMEBREW_PREFIX", nil)
     system "./configure", "--prefix=#{prefix}", "--with-libev=#{h}", "--with-gettext=#{h}", *std_configure_args
     system "make"
     system "make", "install"
@@ -35,4 +39,3 @@ class Cqlsh < Formula
     assert_match "usage: Usage: cqlsh.*", shell_output("#{bin}/axonos-cqlsh --help 2>&1", 2)
   end
 end
-
