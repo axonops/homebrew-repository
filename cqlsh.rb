@@ -3,7 +3,7 @@ class Cqlsh < Formula
 
   desc "Home of the cqlsh package on PyPI. Repackages the official Cassandra cqlsh for lighter-weight installs."
   homepage "https://github.com/axonops/cqlsh"
-  url "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", tag: "v0.0.4", using: :git
+  url "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", tag: "v0.0.4", using: :git, revision: "dc79097ef9439cd024a3c37c97ab456732c80ab1"
   #head "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", branch: "improvements", using: :git
   license "Apache-2.0"
 
