@@ -5,7 +5,7 @@ cask "axonopsworkbench-internal" do
   sha256 arm:   "ad9ceb23ffe67130dcfb6914dc3bceff738c8d955eb4f47d6f1718419746cd8a",
          intel: "ab86d5f19f72e36907a7cc023589caa3a90c829c69536ae8357f52e850df4694"
 
-  url "https://github.com/axonops/axonops-workbench/releases/download/#{version}/AxonOps.Workbench-#{version.sub('v', '')}-mac-#{arch}.zip"
+  url "https://github.com/axonops/axonops-workbench/releases/download/#{version}/AxonOps.Workbench-#{version.sub("v", "")}-mac-#{arch}.zip"
   name "AxonOps Workbench"
   desc "This Cask install the AxonOps Workbench application"
   homepage "https://github.com/axonops/axonops-workbench/"
