@@ -9,7 +9,7 @@ Or `brew tap axonops/homebrew-repository` and then `brew install <formula>`.
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
-tap "axonops/repository"
+brew tap "axonops/repository"
 brew "<formula>"
 ```
 
