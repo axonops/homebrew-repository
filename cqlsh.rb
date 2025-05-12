@@ -7,7 +7,7 @@ class Cqlsh < Formula
 
   desc "Repackages the official Cassandra for lighter-weight installs"
   homepage "https://github.com/axonops/cqlsh"
-  url "https://github.com/axonops/axonops-cqlsh-binary.git", tag: "v0.0.1", using: :git, revision: "f00a074d466eaaf9a3178973bd038ced03bee1ed"
+  url "https://github.com/axonops/axonops-cqlsh-binary.git", tag: "v0.0.1", using: :git, revision: "5e34f803613e4ba6934606b7db88f6605c1750e0"
   # head "git@bitbucket.org:digitalisio/axonops-cqlsh-binary.git", branch: "improvements", using: :git
   license "Apache-2.0"
 
