@@ -1,8 +1,8 @@
 class Cqlai < Formula
   desc "cqlai is a fast, portable, and AI-enhanced interactive terminal for Cassandra (CQL), built in Go"
   homepage "https://github.com/axonops/cqlai"
-  url "https://github.com/axonops/cqlai/archive/refs/tags/v0.0.27.tar.gz"
-                        sha256 "e420fa44b94749be62adb2bf1dd62740df3a1a023d0e7968cd585a0e43902031"
+  url "https://github.com/axonops/cqlai/archive/refs/tags/v0.0.28.tar.gz"
+                          sha256 "daabcfbe456da1f92d905979c0edf4d0ea2b3176537774ddffc7d57e7f9a2b88"
   license "Apache-2.0"
   head "https://github.com/axonops/cqlai.git", branch: "main"
 
@@ -14,7 +14,7 @@ class Cqlai < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=v0.0.27 "./cmd/cqlai/main.go"
+    system "go", "build", *std_go_args(ldflags: "-s -w -X main.Version=v0.0.28 "./cmd/cqlai/main.go"
   end
 
   test do
