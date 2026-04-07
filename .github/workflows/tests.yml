@@ -8,21 +8,8 @@ on:
 
 jobs:
   test-bot:
-    strategy:
-      matrix:
-        include:
-          - os: macos-14
-            arch: arm64
-          - os: macos-14
-            arch: x86_64
-    runs-on: ${{ matrix.os }}
-    env:
-      HOMEBREW_ARCH: ${{ matrix.arch }}
+    runs-on: ubuntu-24.04
     steps:
-      - name: Set up Rosetta 2 (for x86_64 cross-compilation)
-        if: matrix.arch == 'x86_64'
-        run: sudo softwareupdate --install-rosetta --agree-to-license
-
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -31,23 +18,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ matrix.os }}-${{ matrix.arch }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ matrix.os }}-${{ matrix.arch }}-rubygems-
+          key: ubuntu-24.04-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ubuntu-24.04-rubygems-
 
-      - name: Run cleanup (x86_64)
-        if: matrix.arch == 'x86_64'
-        run: arch -x86_64 brew test-bot --only-cleanup-before
-
-      - name: Run cleanup (arm64)
-        if: matrix.arch == 'arm64'
+      - name: Run cleanup
         run: brew test-bot --only-cleanup-before
 
-      - name: Run setup (x86_64)
-        if: matrix.arch == 'x86_64'
-        run: arch -x86_64 brew test-bot --only-setup
-
-      - name: Run setup (arm64)
-        if: matrix.arch == 'arm64'
+      - name: Run setup
         run: brew test-bot --only-setup
 
       # - run: brew test-bot --only-tap-syntax
@@ -59,5 +36,5 @@ jobs:
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
-          name: bottles_${{ matrix.os }}_${{ matrix.arch }}
+          name: bottles_ubuntu-24.04
           path: '*.bottle.*'
