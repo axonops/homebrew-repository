@@ -2,7 +2,7 @@ class Cqlai < Formula
   desc "cqlai is a fast, portable, and AI-enhanced interactive terminal for Cassandra (CQL), built in Go"
   homepage "https://github.com/axonops/cqlai"
   url "https://github.com/axonops/cqlai/archive/refs/tags/v0.1.2rc1.tar.gz"
-            sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+              sha256 "8d5a5293ca89db66be385e341b683c87d0b00627ee466b3f950c62abb65d20ff"
   license "Apache-2.0"
   head "https://github.com/axonops/cqlai.git", branch: "main"
 
