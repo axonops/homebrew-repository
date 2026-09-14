@@ -1,9 +1,9 @@
 cask "axonopsworkbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "v1.1.0"
-  sha256 arm:   "aada655dd7070199f977520fc232c7dd77b1d455902baeacc8dd832aab1de0ae",
-         intel: "911f89466885c3c6a302cfe7df1cfa509ccbe7989dd2eaae9941d51907f421b2"
+  version "v1.2.0"
+  sha256 arm:   "2c15f3980575af1e6163863cfe8f19a60871b9a75d96e39ebccef53361bb6026",
+         intel: "ddc6bdec753cd0ccd6fa284a2f3250267eb390e021d8825b88a898bdd37db2bb"
 
   url "https://github.com/axonops/axonops-workbench/releases/download/#{version}/AxonOps.Workbench-#{version.sub('v', '')}-mac-#{arch}.zip"
   name "AxonOps Workbench"
